@@ -1,0 +1,18 @@
+<h2> chat room </h2>
+
+<div id="chat_container">
+    <% @chats.each do |chat| %>
+        <p> <%= chat.contents %> </p>
+    <% end %>    
+</div>
+
+
+<%= form_for @chat, url:chat_create_path, remote: true do |f| %>
+    <div class="form_item">
+        <%= f.text_field :contents %>
+    </div>
+    
+    <div style="margin-top: 30px;">
+        <%= f.submit "전송"%>
+    </div>
+<% end %>

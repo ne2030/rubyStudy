@@ -1,0 +1,4 @@
+var newChat = document.createElement('p');
+newChat.innerHTML = "<%= @chat.contents %>";
+document.getElementById("chat_container").appendChild(newChat);
+document.getElementById("chat_contents").value = "";

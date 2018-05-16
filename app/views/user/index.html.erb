@@ -1,0 +1,12 @@
+<%= form_for @user, url:user_create_path do |f| %>
+    <div class="form_item">
+        <%= f.text_field :name %>
+    </div>
+    <div style="display:hidden" class="form_item">
+        <%= f.number_field :role, 3 %>
+    </div>
+    
+    <div style="margin-top: 30px;">
+        등록 <%= f.submit %>
+    </div>
+<% end %>
